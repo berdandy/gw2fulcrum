@@ -1,7 +1,6 @@
 use clap::Parser;
 
-use chatr::*;
-
+use chatr;
 use fulcrum;
 
 /// Fulcrum determines if a build is affected by balance changes
@@ -17,4 +16,9 @@ pub struct Args {
 
 fn main() {
     let args = Args::parse();
+
+    let code = chatr::ChatCode::build(&args.build).unwrap();
+    let _dep = fulcrum::BuildDep::from_chatcode(&code);
+
+    eprintln!("FULCRUM!");
 }
