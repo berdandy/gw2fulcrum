@@ -1,0 +1,8 @@
+[package]
+name = "fulcrum"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+chatr = "0.6.10"
+clap = { version = "4.5.39", features = ["derive"] }
