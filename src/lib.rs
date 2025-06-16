@@ -2,8 +2,8 @@ use chatr::BuildTemplate as BuildTemplate;
 use chatr::ChatCode as ChatCode;
 
 pub struct BuildDep {
-    skills: Vec<u16>,
-    traits: Vec<u16>,
+    pub skills: Vec<u16>,
+    pub traits: Vec<u16>,
 }
 
 impl BuildDep  {
