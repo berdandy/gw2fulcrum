@@ -15,8 +15,6 @@ fn extract_build_deps_from_buildmd() {
     let code = chatr::ChatCode::build(&codestring).unwrap();
     let dep = fulcrum::BuildDep::from_chatcode(&code);
 
-    // TODO: ADD weapon skills from gs & sword to this
-    // TODO: sort skills and traits
     let expected_skills = vec!(30488, 10620, 10583, 10685, 30105);
     let expected_traits = vec!(1876, 1844, 782, 875, 894, 893, 2020, 2031, 2021);
 
@@ -61,6 +59,23 @@ fn get_dep_skillset() {
     let dep = fulcrum::BuildDep::from_chatcode(&code);
 
     let expected = HashSet::from([5571, 5666, 5570, 5503, 5542]);
+    assert_eq!(dep.skillset(), expected);
+}
+
+#[test]
+fn get_skillset_with_weapon_skills() {
+    let build_str = include_str!("sample_build_1.md");
+
+    let build = chatr::BuildTemplate::parse_string(build_str).unwrap();
+    let gear = chatr::GearTemplate::parse_string(build_str).unwrap();
+
+    let dep = fulcrum::BuildDep::from_templates(&gear, &build);
+
+    let expected = HashSet::from([
+        29705, 30799, 29867, 30163, 30860, 29855, 29740, // necro gs
+        71986, 71850, 72051, 71883, 71914, 71799, 71871, 71813, 72068, 71998, 71926, // necro sw/sw
+        30488, 10583, 30105, 10620, 10685,  // healing, utility, elite
+    ]);
     assert_eq!(dep.skillset(), expected);
 }
 

@@ -7,7 +7,7 @@ use std::collections::HashSet as HashSet;
 pub struct BuildDep {
     pub gear: GearTemplate,
 
-    pub skills: Vec<u16>,
+    pub skills: Vec<u32>,
     pub traits: Vec<u16>,
 }
 
@@ -37,7 +37,7 @@ impl BuildDep  {
         HashSet::from_iter(self.traits.iter().cloned())
     }
 
-    pub fn skillset(self) -> HashSet<u16> {
+    pub fn skillset(self) -> HashSet<u32> {
         HashSet::from_iter(self.skills.iter().cloned())
     }
 }
