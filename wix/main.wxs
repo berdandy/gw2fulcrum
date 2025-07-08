@@ -173,7 +173,7 @@
         <!--<Icon Id='ProductICO' SourceFile='wix\Product.ico'/>-->
         <!--<Property Id='ARPPRODUCTICON' Value='ProductICO' />-->
 
-        <Property Id='ARPHELPLINK' Value='https://github.com/berdandy/gw2-fulcrum'/>
+        <Property Id='ARPHELPLINK' Value='https://github.com/berdandy/gw2fulcrum'/>
         
         <UI>
             <UIRef Id='WixUI_FeatureTree'/>
