@@ -7,9 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.1.0 (2025-07-08)
 
+<csr-id-32d51aacaec9a8fab5659188becbd10117bfcc5a/>
+<csr-id-1a03e76e4dc73096bfb08b7e8fd7efacd2d31505/>
+<csr-id-dc8c813b855bf7fd7a5a1fd83b17cd26e44487ce/>
+<csr-id-e3fd553dc87c7aefa6eebcd751ea82abea891775/>
+<csr-id-30ccf278b1a716ac59cde8360b1547343774a2a1/>
+
 ### Test
 
  - <csr-id-32d51aacaec9a8fab5659188becbd10117bfcc5a/> added failing test for skillset with weapons
+
+### Other
+
+ - <csr-id-d990dc4aeed350b8b388cf66ac7ca22ac3bd7c72/> dep versions missing
 
 ### Other
 
@@ -30,8 +40,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 11 commits contributed to the release over the course of 31 calendar days.
- - 7 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 13 commits contributed to the release over the course of 31 calendar days.
+ - 8 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
 ### Commit Details
@@ -41,6 +51,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Dep versions missing ([`d990dc4`](https://github.com/berdandy/fulcrum/commit/d990dc4aeed350b8b388cf66ac7ca22ac3bd7c72))
+    - Release fulcrum v0.1.0 ([`6486e72`](https://github.com/berdandy/fulcrum/commit/6486e72b2aa21d2fc90b5a1d54f93e7671d68992))
     - Added helper release script so I don't have to remember things ([`44f8239`](https://github.com/berdandy/fulcrum/commit/44f82390ab4c1e94b76f09548a8d7eaad65012a6))
     - Cargo dist init ([`dc8c813`](https://github.com/berdandy/fulcrum/commit/dc8c813b855bf7fd7a5a1fd83b17cd26e44487ce))
     - Added dependency generation from build files ([`4a426b4`](https://github.com/berdandy/fulcrum/commit/4a426b4e2273ef8a15cf8f2ed1bc890520491526))
