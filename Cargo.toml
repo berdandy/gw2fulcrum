@@ -14,7 +14,7 @@ license = false
 eula = false
 
 [dependencies]
-chatr = { path = "../chatr" } # "0.6.10"
+chatr = { version = "0.6.24", path = "../chatr" }
 clap = { version = "4.5.39", features = ["derive"] }
 regex = "1.11.1"
 
