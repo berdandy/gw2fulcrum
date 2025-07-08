@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.1.1 (2025-07-08)
+
+### Other
+
+ - <csr-id-1c09d16bf0c1342a44ba98e54d8703c70e219d03/> left local path in chatr dep
+ - <csr-id-ba10cd289c098edb11bbfb0fa752c1ad582242a0/> left local path in chatr dep
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 2 commits contributed to the release.
+ - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Left local path in chatr dep ([`1c09d16`](https://github.com/berdandy/gw2fulcrum/commit/1c09d16bf0c1342a44ba98e54d8703c70e219d03))
+    - Left local path in chatr dep ([`ba10cd2`](https://github.com/berdandy/gw2fulcrum/commit/ba10cd289c098edb11bbfb0fa752c1ad582242a0))
+</details>
+
 ## 0.1.0 (2025-07-08)
 
 <csr-id-32d51aacaec9a8fab5659188becbd10117bfcc5a/>
@@ -41,7 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 16 commits contributed to the release over the course of 31 calendar days.
+ - 17 commits contributed to the release over the course of 31 calendar days.
  - 8 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -52,6 +78,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release gw2fulcrum v0.1.0 ([`5c56e50`](https://github.com/berdandy/gw2fulcrum/commit/5c56e50d89eab15d52b1bda606f7cb9df41aa5ca))
     - One more fulcrum -> gw2fulcrum ([`d361893`](https://github.com/berdandy/gw2fulcrum/commit/d36189316c71e97d0809904ac800d59272ac5ed5))
     - Rename to gw2fulcrum ([`da3bb52`](https://github.com/berdandy/gw2fulcrum/commit/da3bb5218bdeb9b85143d1fc9bd1eec290a16f27))
     - Release fulcrum v0.1.0 ([`2b9c1d0`](https://github.com/berdandy/gw2fulcrum/commit/2b9c1d018fad92e4c18d8140155ad6088489f32c))
