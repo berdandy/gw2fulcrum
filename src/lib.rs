@@ -42,3 +42,18 @@ impl BuildDependencies  {
         HashSet::from_iter(self.skills.iter().cloned())
     }
 }
+
+#[derive(Default, Debug)]
+pub struct BalanceUpdate {
+    pub skills: Vec<u32>,
+    pub traits: Vec<u16>,
+}
+
+impl BalanceUpdate {
+    pub fn parse_notes(_notes :&str) -> BalanceUpdate {
+        BalanceUpdate {
+            skills: vec!(1, 2, 3),
+            traits: vec!(4, 5, 6),
+        }
+    }
+}
