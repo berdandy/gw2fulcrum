@@ -5,24 +5,24 @@ use chatr::ChatCode as ChatCode;
 use std::collections::HashSet as HashSet;
 
 pub struct BuildDep {
-    pub gear: GearTemplate,
-
     pub skills: Vec<u32>,
     pub traits: Vec<u16>,
 }
 
 impl BuildDep  {
     pub fn from_templates(gear: &GearTemplate, build: &BuildTemplate) -> BuildDep {
+        let mut skillset = build.get_skill_ids().unwrap().to_vec();
+        let gearskills = gear.get_weapon_skills(build.profession);
+        skillset.extend(gearskills);
+
         BuildDep {
-            gear: gear.clone(),
-            skills: build.get_skill_ids().unwrap().to_vec(),
+            skills: skillset,
             traits: build.get_traits().to_vec(),
         }
     }
 
     pub fn from_build(build: &BuildTemplate) -> BuildDep {
         BuildDep {
-            gear: GearTemplate::default(),
             skills: build.get_skill_ids().unwrap().to_vec(),
             traits: build.get_traits().to_vec(),
         }

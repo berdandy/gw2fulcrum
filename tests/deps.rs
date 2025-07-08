@@ -26,22 +26,19 @@ fn extract_build_deps_from_buildmd() {
 fn extract_gear_from_buildmd() {
     let build_str = include_str!("sample_build_1.md");
 
-    let build = chatr::BuildTemplate::parse_string(build_str).unwrap();
     let gear = chatr::GearTemplate::parse_string(build_str).unwrap();
-
-    let dep = fulcrum::BuildDep::from_templates(&gear, &build);
 
     let expected_gear = chatr::GearTemplate{
         armor: [161; 6],                        // berserker's
         rune:  24836,                           // scholar
-        weapon_types: [0; 4],                   // ? gs, sw/sw
+        weapon_types: ["greatsword", "sword_main", "sword_off", ""], // ? gs, sw/sw
         weapons: [161; 4],                      // berserker's
         sigils: [24615, 24597, 24615, 24554],   // force/hydro, force/air
 
         trinkets: [161; 6],                     // berserker's
         relic: 101580                           // thief
     };
-    assert_eq!(dep.gear, expected_gear);
+    assert_eq!(gear, expected_gear);
 }
 
 #[test]
