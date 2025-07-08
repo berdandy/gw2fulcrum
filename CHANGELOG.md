@@ -5,7 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.1.2 (2025-07-08)
+
+### Other
+
+ - <csr-id-af86975670ffe636500539745aa52939601b2793/> one more gw2fulcrum thing
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 1 commit contributed to the release.
+ - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - One more gw2fulcrum thing ([`af86975`](https://github.com/berdandy/gw2fulcrum/commit/af86975670ffe636500539745aa52939601b2793))
+</details>
+
 ## 0.1.1 (2025-07-08)
+
+<csr-id-1c09d16bf0c1342a44ba98e54d8703c70e219d03/>
+<csr-id-ba10cd289c098edb11bbfb0fa752c1ad582242a0/>
 
 ### Other
 
@@ -16,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 2 commits contributed to the release.
+ - 3 commits contributed to the release.
  - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -27,6 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release gw2fulcrum v0.1.1 ([`cae3767`](https://github.com/berdandy/gw2fulcrum/commit/cae376797a3d1cb2920da7f6f63d903212b6e031))
     - Left local path in chatr dep ([`1c09d16`](https://github.com/berdandy/gw2fulcrum/commit/1c09d16bf0c1342a44ba98e54d8703c70e219d03))
     - Left local path in chatr dep ([`ba10cd2`](https://github.com/berdandy/gw2fulcrum/commit/ba10cd289c098edb11bbfb0fa752c1ad582242a0))
 </details>
