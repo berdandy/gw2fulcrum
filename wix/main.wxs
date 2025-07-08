@@ -60,7 +60,7 @@
 
     <Product
         Id='*'
-        Name='fulcrum'
+        Name='gw2fulcrum'
         UpgradeCode='813E4A35-4614-44A7-BD71-C509623C80F4'
         Manufacturer='Andy Berdan'
         Language='1033'
@@ -83,11 +83,11 @@
             DowngradeErrorMessage='A newer version of [ProductName] is already installed. Setup will now exit.'/>
 
         <Media Id='1' Cabinet='media1.cab' EmbedCab='yes' DiskPrompt='CD-ROM #1'/>
-        <Property Id='DiskPrompt' Value='fulcrum Installation'/>
+        <Property Id='DiskPrompt' Value='gw2fulcrum Installation'/>
 
         <Directory Id='TARGETDIR' Name='SourceDir'>
             <Directory Id='$(var.PlatformProgramFilesFolder)' Name='PFiles'>
-                <Directory Id='APPLICATIONFOLDER' Name='fulcrum'>
+                <Directory Id='APPLICATIONFOLDER' Name='gw2fulcrum'>
                     
                     <!--
                       Enabling the license sidecar file in the installer is a four step process:
@@ -123,9 +123,9 @@
                         <Component Id='binary0' Guid='*'>
                             <File
                                 Id='exe0'
-                                Name='fulcrum.exe'
+                                Name='gw2fulcrum.exe'
                                 DiskId='1'
-                                Source='$(var.CargoTargetBinDir)\fulcrum.exe'
+                                Source='$(var.CargoTargetBinDir)\gw2fulcrum.exe'
                                 KeyPath='yes'/>
                         </Component>
                     </Directory>
@@ -173,7 +173,7 @@
         <!--<Icon Id='ProductICO' SourceFile='wix\Product.ico'/>-->
         <!--<Property Id='ARPPRODUCTICON' Value='ProductICO' />-->
 
-        <Property Id='ARPHELPLINK' Value='https://github.com/berdandy/fulcrum'/>
+        <Property Id='ARPHELPLINK' Value='https://github.com/berdandy/gw2-fulcrum'/>
         
         <UI>
             <UIRef Id='WixUI_FeatureTree'/>

@@ -2,7 +2,7 @@ use clap::Parser;
 use std::fs;
 
 use chatr;
-use fulcrum;
+use gw2fulcrum;
 
 /// Fulcrum determines if a build is affected by balance changes
 #[derive(Parser)]
@@ -21,7 +21,7 @@ fn main() {
             let build = chatr::BuildTemplate::parse_string(&contents).expect("Error parsing build template");
             let gear = chatr::GearTemplate::parse_string(&contents).expect("Error parsing gear");
 
-            let dep = fulcrum::BuildDependencies::from_templates(&gear, &build);
+            let dep = gw2fulcrum::BuildDependencies::from_templates(&gear, &build);
             println!("{:?}", dep);
         }
     }

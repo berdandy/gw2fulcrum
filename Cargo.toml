@@ -1,11 +1,11 @@
 [package]
-name = "fulcrum"
+name = "gw2fulcrum"
 description = "tooling to assist with gw2 balance updates"
 license = "MIT"
 version = "0.1.0"
 edition = "2024"
 authors = ["Andy Berdan <andy@berdan.ca>"]
-repository = "https://github.com/berdandy/fulcrum"
+repository = "https://github.com/berdandy/gw2fulcrum"
 
 [package.metadata.wix]
 upgrade-guid = "813E4A35-4614-44A7-BD71-C509623C80F4"

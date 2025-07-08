@@ -2,7 +2,7 @@ use regex::Regex;
 use std::collections::HashSet;
 
 use chatr;
-use fulcrum;
+use gw2fulcrum;
 
 #[test]
 fn extract_build_deps_from_buildmd() {
@@ -13,7 +13,7 @@ fn extract_build_deps_from_buildmd() {
     let codestring = &caps["code"];
 
     let code = chatr::ChatCode::build(&codestring).unwrap();
-    let dep = fulcrum::BuildDep::from_chatcode(&code);
+    let dep = gw2fulcrum::BuildDep::from_chatcode(&code);
 
     let expected_skills = vec!(30488, 10620, 10583, 10685, 30105);
     let expected_traits = vec!(1876, 1844, 782, 875, 894, 893, 2020, 2031, 2021);
@@ -44,7 +44,7 @@ fn extract_gear_from_buildmd() {
 #[test]
 fn get_dep_traitset() {
     let code = chatr::ChatCode::build("[&DQYpGyU+OD90AAAAywAAAI8AAACRAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]").unwrap();
-    let dep = fulcrum::BuildDep::from_chatcode(&code);
+    let dep = gw2fulcrum::BuildDep::from_chatcode(&code);
 
     let expected = HashSet::from([2170, 232, 214, 266, 226, 1511, 257, 2115, 2138]);
     assert_eq!(dep.traitset(), expected);
@@ -53,7 +53,7 @@ fn get_dep_traitset() {
 #[test]
 fn get_dep_skillset() {
     let code = chatr::ChatCode::build("[&DQYpGyU+OD90AAAAywAAAI8AAACRAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]").unwrap();
-    let dep = fulcrum::BuildDep::from_chatcode(&code);
+    let dep = gw2fulcrum::BuildDep::from_chatcode(&code);
 
     let expected = HashSet::from([5571, 5666, 5570, 5503, 5542]);
     assert_eq!(dep.skillset(), expected);
@@ -66,7 +66,7 @@ fn get_skillset_with_weapon_skills() {
     let build = chatr::BuildTemplate::parse_string(build_str).unwrap();
     let gear = chatr::GearTemplate::parse_string(build_str).unwrap();
 
-    let dep = fulcrum::BuildDep::from_templates(&gear, &build);
+    let dep = gw2fulcrum::BuildDep::from_templates(&gear, &build);
 
     let expected = HashSet::from([
         // 29705, 30799, 29867, 30163, 30860, 29855, 29740, // necro gs with flipovers
@@ -86,7 +86,7 @@ fn get_skillset_with_weapon_flipover_skills() {
     let build = chatr::BuildTemplate::parse_string(build_str).unwrap();
     let gear = chatr::GearTemplate::parse_string(build_str).unwrap();
 
-    let dep = fulcrum::BuildDep::from_templates(&gear, &build);
+    let dep = gw2fulcrum::BuildDep::from_templates(&gear, &build);
 
     let expected = HashSet::from([
         29705, 30799, 29867, 30163, 30860, 29855, 29740, // necro gs with flipovers
@@ -100,7 +100,7 @@ fn get_skillset_with_weapon_flipover_skills() {
 #[test]
 fn dependency_trait_skill_changed_build() {
     let code = chatr::BuildTemplate::from_string("[&DQYpGyU+OD90AAAAywAAAI8AAACRAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]");
-    let dep = fulcrum::BuildDep::from_chatcode(&code); // hashmap?
+    let dep = gw2fulcrum::BuildDep::from_chatcode(&code); // hashmap?
 
     // these traits and skills are in the template
     let breaking_update = Update {
@@ -116,7 +116,7 @@ fn dependency_trait_skill_changed_build() {
 #[test]
 fn dependency_no_change_build() {
     let code = chatr::BuildTemplate::from_string("[&DQYpGyU+OD90AAAAywAAAI8AAACRAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]");
-    let dep = fulcrum::BuildDep::from_chatcode(&code);
+    let dep = gw2fulcrum::BuildDep::from_chatcode(&code);
 
     let safe_update = Update {
         id: String::from("Safe 20xx"),
