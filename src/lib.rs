@@ -4,31 +4,32 @@ use chatr::ChatCode as ChatCode;
 
 use std::collections::HashSet as HashSet;
 
-pub struct BuildDep {
+#[derive(Default, Debug, PartialEq)]
+pub struct BuildDependencies {
     pub skills: Vec<u32>,
     pub traits: Vec<u16>,
 }
 
-impl BuildDep  {
-    pub fn from_templates(gear: &GearTemplate, build: &BuildTemplate) -> BuildDep {
+impl BuildDependencies  {
+    pub fn from_templates(gear: &GearTemplate, build: &BuildTemplate) -> BuildDependencies {
         let mut skillset = build.get_skill_ids().unwrap().to_vec();
-        let gearskills = gear.get_weapon_skills(build.profession);
+        let gearskills = Vec::from_iter(gear.get_weapon_skills(build.profession));
         skillset.extend(gearskills);
 
-        BuildDep {
+        BuildDependencies {
             skills: skillset,
             traits: build.get_traits().to_vec(),
         }
     }
 
-    pub fn from_build(build: &BuildTemplate) -> BuildDep {
-        BuildDep {
+    pub fn from_build(build: &BuildTemplate) -> BuildDependencies {
+        BuildDependencies {
             skills: build.get_skill_ids().unwrap().to_vec(),
             traits: build.get_traits().to_vec(),
         }
     }
 
-    pub fn from_chatcode(code: &ChatCode) -> BuildDep {
+    pub fn from_chatcode(code: &ChatCode) -> BuildDependencies {
         let build = BuildTemplate::try_from_chatcode(code).unwrap();
         Self::from_build(&build)
     }

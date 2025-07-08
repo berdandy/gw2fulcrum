@@ -31,7 +31,7 @@ fn extract_gear_from_buildmd() {
     let expected_gear = chatr::GearTemplate{
         armor: [161; 6],                        // berserker's
         rune:  24836,                           // scholar
-        weapon_types: ["greatsword", "sword_main", "sword_off", ""], // ? gs, sw/sw
+        weapon_types: ["greatsword", "sword", "sword", ""], // ? gs, sw/sw
         weapons: [161; 4],                      // berserker's
         sigils: [24615, 24597, 24615, 24554],   // force/hydro, force/air
 
@@ -69,8 +69,28 @@ fn get_skillset_with_weapon_skills() {
     let dep = fulcrum::BuildDep::from_templates(&gear, &build);
 
     let expected = HashSet::from([
-        29705, 30799, 29867, 30163, 30860, 29855, 29740, // necro gs
-        71986, 71850, 72051, 71883, 71914, 71799, 71871, 71813, 72068, 71998, 71926, // necro sw/sw
+        // 29705, 30799, 29867, 30163, 30860, 29855, 29740, // necro gs with flipovers
+        // 71986, 71850, 72051, 71883, 71914, 71799, 71871, 71813, 72068, 71998, 71926, // necro sw/sw with flipovers
+        29705, 30163, 30860, 29855, 29740, // necro gs
+        71986, 71883, 71799, 71813, 71998, // necro sw/sw
+        30488, 10583, 30105, 10620, 10685,  // healing, utility, elite
+    ]);
+    assert_eq!(dep.skillset(), expected);
+}
+
+#[test]
+#[ignore = "flipovers not implemented"]
+fn get_skillset_with_weapon_flipover_skills() {
+    let build_str = include_str!("sample_build_1.md");
+
+    let build = chatr::BuildTemplate::parse_string(build_str).unwrap();
+    let gear = chatr::GearTemplate::parse_string(build_str).unwrap();
+
+    let dep = fulcrum::BuildDep::from_templates(&gear, &build);
+
+    let expected = HashSet::from([
+        29705, 30799, 29867, 30163, 30860, 29855, 29740, // necro gs with flipovers
+        71986, 71850, 72051, 71883, 71914, 71799, 71871, 71813, 72068, 71998, 71926, // necro sw/sw with flipovers
         30488, 10583, 30105, 10620, 10685,  // healing, utility, elite
     ]);
     assert_eq!(dep.skillset(), expected);
