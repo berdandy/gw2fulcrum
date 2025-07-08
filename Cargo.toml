@@ -1,9 +1,24 @@
 [package]
 name = "fulcrum"
+description = "tooling to assist with gw2 balance updates"
+license = "MIT"
 version = "0.1.0"
 edition = "2024"
+authors = ["Andy Berdan <andy@berdan.ca>"]
+repository = "https://github.com/berdandy/fulcrum"
+
+[package.metadata.wix]
+upgrade-guid = "813E4A35-4614-44A7-BD71-C509623C80F4"
+path-guid = "50375D32-C20A-4656-989D-3133C10EA97A"
+license = false
+eula = false
 
 [dependencies]
 chatr = { path = "../chatr" } # "0.6.10"
 clap = { version = "4.5.39", features = ["derive"] }
 regex = "1.11.1"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
