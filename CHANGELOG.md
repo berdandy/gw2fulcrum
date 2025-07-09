@@ -5,7 +5,43 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.1.3 (2025-07-08)
+
+### New Features
+
+ - <csr-id-7a313b44c1e35525315556cb6b7ac05473653ad5/> first working implementation of update note analysis
+
+### Other
+
+ - <csr-id-52b5a1b0a251e005339efd28ad41c0d83004c6bf/> balance update extraction from anet notes
+
+### Test
+
+ - <csr-id-8497951d2bc6aa60685ff43d2e8ab36471551223/> typos in tests. Should have run it after renaming things.
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 3 commits contributed to the release.
+ - 3 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - First working implementation of update note analysis ([`7a313b4`](https://github.com/berdandy/gw2fulcrum/commit/7a313b44c1e35525315556cb6b7ac05473653ad5))
+    - Balance update extraction from anet notes ([`52b5a1b`](https://github.com/berdandy/gw2fulcrum/commit/52b5a1b0a251e005339efd28ad41c0d83004c6bf))
+    - Typos in tests. Should have run it after renaming things. ([`8497951`](https://github.com/berdandy/gw2fulcrum/commit/8497951d2bc6aa60685ff43d2e8ab36471551223))
+</details>
+
 ## 0.1.2 (2025-07-08)
+
+<csr-id-af86975670ffe636500539745aa52939601b2793/>
 
 ### Other
 
@@ -15,7 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 1 commit contributed to the release.
+ - 2 commits contributed to the release.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -26,6 +62,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release gw2fulcrum v0.1.2 ([`76f2720`](https://github.com/berdandy/gw2fulcrum/commit/76f2720e638dea6bb77d66f27dbd2acc58b08722))
     - One more gw2fulcrum thing ([`af86975`](https://github.com/berdandy/gw2fulcrum/commit/af86975670ffe636500539745aa52939601b2793))
 </details>
 
