@@ -11,9 +11,8 @@ pub struct Args {
     #[arg(short, long)]
     verbose: bool,
 
-    #[arg(short, long)]
     /// update note file, in the format of: "(SKILL_OR_TRAIT_NAME): (NOTES)"
-    update_path: Option<String>,
+    update_path: String,
 
     /// build markdown filenames
     builds: Vec<String>,
@@ -22,14 +21,15 @@ pub struct Args {
 fn main() {
     let args = Args::parse();
     
-    let mut update = BalanceUpdate::default();
-    if let Some(update_filepath) = &args.update_path {
-        if let Ok(update_str) = fs::read_to_string(update_filepath.clone()) {
-            update = BalanceUpdate::parse_notes(&update_str);
-        }
+    if args.verbose {
+        println!("UPDATE: {}", args.update_path);
     }
+    let update = match fs::read_to_string(args.update_path.clone()) {
+        Ok(update_str) => BalanceUpdate::parse_notes(&update_str),
+        _ => BalanceUpdate::default(),
+    };
 
-    for file_path in args.builds {
+    for file_path in &args.builds {
         if let Ok(contents) = fs::read_to_string(file_path.clone()) {
             if args.verbose {
                 println!("READING: {}", file_path.clone());
@@ -39,9 +39,10 @@ fn main() {
             let gear = chatr::GearTemplate::parse_string(&contents).expect("Error parsing gear");
 
             let dep = BuildDependencies::from_templates(&gear, &build);
-
-            if args.verbose {
-                println!("{:?} compare with {:?}", dep, update);
+            if update.affects(&dep) {
+                println!("{} was changed by this update", file_path.clone());
+            } else if args.verbose || args.builds.len() == 1 {
+                println!("{} was unchanged", file_path.clone());
             }
         }
     }

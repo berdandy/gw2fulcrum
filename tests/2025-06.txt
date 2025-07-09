@@ -7,10 +7,10 @@ Imaginary Axes: Increased the player torment duration from 4 seconds to 6 second
 Chaos Vortex: Increased the boon radius from 360 to 480. Increased the player condition duration from 8 seconds to 10 seconds in PvE only.
 Soul Shards: Reduced the life-steal damage from 605 to 456 and the life-steal healing from 576 to 476 in PvP only.
 Hungering Maelstrom: Reduced the life-steal damage from 1,764 to 1,228 and reduced the first-hit healing from 1,764 to 1,228 in PvP only.
-Regenerate (Juvenile Fern Hound): Reduced the healing from 2,600 to 1,960 in PvP only.
+Regenerate: Reduced the healing from 2,600 to 1,960 in PvP only.
 Griffon Stance: Evasion bonuses now have an internal cooldown of 1 second.
-Bumble (Juvenile Janthiri Bee): Reduced the knockdown duration from 3 to 2 seconds in PvP only.
-Stinging Sorrow (Juvenile Janthiri Bee): Reduced the power coefficient per hit from 0.3 to 0.2 in PvP only.
+Bumble: Reduced the knockdown duration from 3 to 2 seconds in PvP only.
+Stinging Sorrow: Reduced the power coefficient per hit from 0.3 to 0.2 in PvP only.
 Primal Cry: Increased the cooldown from 20 seconds to 25 seconds in PvP only.
 Ravager's Abandon: Fixed an issue that prevented this skill from hitting downed enemies.
 Impaling Lotus: Projectiles from this skill can now only hit their original target in all game modes. Increased the bleeding stacks from 1 to 2, and reduced the bleeding duration from 15 seconds to 8 seconds in PvE only.
