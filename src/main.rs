@@ -11,6 +11,9 @@ pub struct Args {
     #[arg(short, long)]
     verbose: bool,
 
+    #[arg(short, long)]
+    invert: bool,
+
     /// update note file, in the format of: "(SKILL_OR_TRAIT_NAME): (NOTES)"
     update_path: String,
 
@@ -31,18 +34,22 @@ fn main() {
 
     for file_path in &args.builds {
         if let Ok(contents) = fs::read_to_string(file_path.clone()) {
-            if args.verbose {
-                println!("READING: {}", file_path.clone());
-            }
-
             let build = chatr::BuildTemplate::parse_string(&contents).expect("Error parsing build template");
             let gear = chatr::GearTemplate::parse_string(&contents).expect("Error parsing gear");
 
             let dep = BuildDependencies::from_templates(&gear, &build);
             if update.affects(&dep) {
-                println!("{} was changed by this update", file_path.clone());
-            } else if args.verbose || args.builds.len() == 1 {
-                println!("{} was unchanged", file_path.clone());
+                if args.verbose || args.builds.len() == 1 {
+                    println!("{} was changed by this update", file_path.clone());
+                } else if ! args.invert {
+                    println!("{}", file_path.clone());
+                }
+            } else {
+                if args.verbose || args.builds.len() == 1 {
+                    println!("{} was unchanged", file_path.clone());
+                } else if args.invert {
+                    println!("{}", file_path.clone());
+                }
             }
         }
     }
