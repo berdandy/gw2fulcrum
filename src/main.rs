@@ -12,6 +12,9 @@ pub struct Args {
     verbose: bool,
 
     #[arg(short, long)]
+    show_notes: bool,
+
+    #[arg(short, long)]
     invert: bool,
 
     /// update note file, in the format of: "(SKILL_OR_TRAIT_NAME): (NOTES)"
@@ -39,7 +42,7 @@ fn main() {
 
             let dep = BuildDependencies::from_templates(&gear, &build);
             if let Some(notes) = update.affects(&dep) {
-                if args.verbose || args.builds.len() == 1 {
+                if args.verbose || args.show_notes || args.builds.len() == 1 {
                     println!("{} was changed: \"{}\"", file_path.clone(), notes);
                 } else if ! args.invert {
                     println!("{}", file_path.clone());
