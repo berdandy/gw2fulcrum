@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.1.5 (2026-01-18)
+
+### New Features
+
+ - <csr-id-f66c0a4facf7bbb01d03e2df8c6af39470867e86/> added skill/trait prefix to build note for usability
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 1 commit contributed to the release.
+ - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Added skill/trait prefix to build note for usability ([`f66c0a4`](https://github.com/berdandy/gw2fulcrum/commit/f66c0a4facf7bbb01d03e2df8c6af39470867e86))
+</details>
+
 ## 0.1.4 (2026-01-18)
 
 ### New Features
@@ -16,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 4 commits contributed to the release.
+ - 5 commits contributed to the release.
  - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -27,6 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release gw2fulcrum v0.1.4 ([`15e7dc3`](https://github.com/berdandy/gw2fulcrum/commit/15e7dc3883a8d4a21859f07357edf5f7ebd3db6c))
     - Release gw2fulcrum v0.1.4 ([`6e1b102`](https://github.com/berdandy/gw2fulcrum/commit/6e1b102c7491f198835320d909f347a7913222c0))
     - Added update note output in verbose mode. First only ([`5f2694f`](https://github.com/berdandy/gw2fulcrum/commit/5f2694f7c76e4aea871ac345fa1dab1276f4f880))
     - Update README.md ([`02939a1`](https://github.com/berdandy/gw2fulcrum/commit/02939a15c8407809940d15ea35c4304604395239))
