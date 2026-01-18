@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 3 commits contributed to the release.
+ - 4 commits contributed to the release.
  - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release gw2fulcrum v0.1.4 ([`6e1b102`](https://github.com/berdandy/gw2fulcrum/commit/6e1b102c7491f198835320d909f347a7913222c0))
     - Added update note output in verbose mode. First only ([`5f2694f`](https://github.com/berdandy/gw2fulcrum/commit/5f2694f7c76e4aea871ac345fa1dab1276f4f880))
     - Update README.md ([`02939a1`](https://github.com/berdandy/gw2fulcrum/commit/02939a15c8407809940d15ea35c4304604395239))
     - Added invert option, and pipe-able output ([`25679aa`](https://github.com/berdandy/gw2fulcrum/commit/25679aafb8a4ca218f4e5b5a99ab2f42ca328915))
