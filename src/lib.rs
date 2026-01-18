@@ -142,7 +142,10 @@ impl BalanceUpdate {
                 if let Some(id) = traitmap.get(name.as_str()) {
                     tr = id.clone() as u16;
                 }
-                update.add_change(sk, tr, note.into());
+                let nm: &str = name.into();
+                let nt: &str = note.into();
+                let namenote = format!("{}: {}", nm, nt);
+                update.add_change(sk, tr, &namenote);
             }
         }
         update
