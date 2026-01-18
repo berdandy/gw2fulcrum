@@ -38,9 +38,9 @@ fn main() {
             let gear = chatr::GearTemplate::parse_string(&contents).expect("Error parsing gear");
 
             let dep = BuildDependencies::from_templates(&gear, &build);
-            if update.affects(&dep) {
+            if let Some(notes) = update.affects(&dep) {
                 if args.verbose || args.builds.len() == 1 {
-                    println!("{} was changed by this update", file_path.clone());
+                    println!("{} was changed: \"{}\"", file_path.clone(), notes);
                 } else if ! args.invert {
                     println!("{}", file_path.clone());
                 }

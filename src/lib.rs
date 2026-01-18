@@ -49,35 +49,64 @@ impl BuildDependencies  {
 type UpdateElement = (u32, String);
 
 #[derive(Default, Debug)]
+pub struct BalanceChange {
+    pub sk: u32,
+    pub tr: u16,
+    pub note: String,
+}
+
+#[derive(Default, Debug)]
 pub struct BalanceUpdate {
-    pub skills: Vec<u32>,
-    pub traits: Vec<u16>,
+    pub changes: Vec<BalanceChange>,
 }
 
 impl BalanceUpdate {
-    /// returns true if any of the provided dependencies are present in the update
-    pub fn affects(&self, dependencies: &BuildDependencies) -> bool {
-		for trait_id in &self.traits {
-            for changed_trait in &dependencies.traits {
-                if trait_id == changed_trait {
-                    return true
+    pub fn new() -> BalanceUpdate {
+        BalanceUpdate {
+            changes: Vec::new()
+        }
+    }
+
+    pub fn add_change(&mut self, sk: u32, tr: u16, note: &str) {
+        self.changes.push(BalanceChange{
+            sk: sk,
+            tr: tr,
+            note: String::from(note),
+        })
+    }
+
+    pub fn print(&self)
+    {
+        for change in &self.changes {
+            if change.sk > 0 {
+                println!("S: {} - {}", change.sk, change.note)
+            } else if change.tr > 0 {
+                println!("T: {} - {}", change.tr, change.note)
+            }
+        }
+    }
+
+    /// returns Some("change note") if any of the provided dependencies are present in the update
+    pub fn affects(&self, dependencies: &BuildDependencies) -> Option<&str> {
+        for change in &self.changes {
+            for dep_trait in &dependencies.traits {
+                if change.tr == *dep_trait {
+                    return Some(&change.note)
+                }
+            }
+            for dep_skill in &dependencies.skills {
+                if change.sk == *dep_skill {
+                    return Some(&change.note)
                 }
             }
         }
-		for skill_id in &self.skills {
-            for changed_skill in &dependencies.skills {
-                if skill_id == changed_skill {
-                    return true
-                }
-            }
-        }
-        false
+        None
     }
 
     pub fn parse_notes(notes :&str) -> BalanceUpdate {
         // skills to id mapping
         let mut skillmap = HashMap::new();
-		let all_skills_str = include_str!("skills.csv");
+        let all_skills_str = include_str!("skills.csv");
         let mut rdr = csv::Reader::from_reader(all_skills_str.as_bytes());
         for result in rdr.deserialize::<UpdateElement>() {
             if let Ok(ue) = result {
@@ -89,7 +118,7 @@ impl BalanceUpdate {
         // println!("Skillmap {:?}", skillmap.len());
 
         let mut traitmap = HashMap::new();
-		let all_traits_str = include_str!("traits.csv");
+        let all_traits_str = include_str!("traits.csv");
         let mut rdr = csv::Reader::from_reader(all_traits_str.as_bytes());
         for result in rdr.deserialize::<UpdateElement>() {
             if let Ok(ue) = result {
@@ -101,25 +130,21 @@ impl BalanceUpdate {
         // println!("Traitmap {:?}", traitmap.len());
 
         // skills & traits are combined in the balance notes
-        let mut skills = HashSet::new();
-        let mut traits = HashSet::new();
-        let re = Regex::new(r"(?<NAME>[\w' ]+):.*").unwrap();
+        let mut update = BalanceUpdate::new();
+        let re = Regex::new(r"(?<NAME>[\w' ]+): (?<NOTE>.*)").unwrap();
         for caps in re.captures_iter(notes) {
-            if let Some(name) = caps.name("NAME") {
+            if let (Some(name), Some(note)) = (caps.name("NAME"), caps.name("NOTE")) {
+                let mut sk = 0;
                 if let Some(id) = skillmap.get(name.as_str()) {
-                    skills.insert(id.clone());
+                    sk = id.clone();
                 }
+                let mut tr = 0;
                 if let Some(id) = traitmap.get(name.as_str()) {
-                    traits.insert(id.clone() as u16);
+                    tr = id.clone() as u16;
                 }
+                update.add_change(sk, tr, note.into());
             }
         }
-        // println!("{:?}", skills.len());
-        // println!("{:?}", traits.len());
-
-        BalanceUpdate {
-            skills: Vec::from_iter(skills),
-            traits: Vec::from_iter(traits),
-        }
+        update
     }
 }

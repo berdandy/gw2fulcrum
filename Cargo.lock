@@ -156,9 +156,7 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "chatr"
-version = "0.6.24"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "665af1dca15ddbe3f21666582e42e5f1d138fca980617aee97520978484b509d"
+version = "0.7.0"
 dependencies = [
  "base64",
  "deku",
