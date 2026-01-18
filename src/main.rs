@@ -45,7 +45,7 @@ fn main() {
                     println!("{}", file_path.clone());
                 }
             } else {
-                if args.builds.len() == 1 {
+                if args.verbose || args.builds.len() == 1 {
                     println!("{} was unchanged", file_path.clone());
                 } else if args.invert {
                     println!("{}", file_path.clone());
