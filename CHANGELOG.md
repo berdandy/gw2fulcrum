@@ -5,7 +5,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.1.4 (2026-01-18)
+
+### New Features
+
+ - <csr-id-5f2694f7c76e4aea871ac345fa1dab1276f4f880/> Added update note output in verbose mode. First only
+ - <csr-id-25679aafb8a4ca218f4e5b5a99ab2f42ca328915/> added invert option, and pipe-able output
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 3 commits contributed to the release.
+ - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Added update note output in verbose mode. First only ([`5f2694f`](https://github.com/berdandy/gw2fulcrum/commit/5f2694f7c76e4aea871ac345fa1dab1276f4f880))
+    - Update README.md ([`02939a1`](https://github.com/berdandy/gw2fulcrum/commit/02939a15c8407809940d15ea35c4304604395239))
+    - Added invert option, and pipe-able output ([`25679aa`](https://github.com/berdandy/gw2fulcrum/commit/25679aafb8a4ca218f4e5b5a99ab2f42ca328915))
+</details>
+
 ## 0.1.3 (2025-07-08)
+
+<csr-id-52b5a1b0a251e005339efd28ad41c0d83004c6bf/>
+<csr-id-8497951d2bc6aa60685ff43d2e8ab36471551223/>
 
 ### New Features
 
@@ -23,7 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 3 commits contributed to the release.
+ - 4 commits contributed to the release.
  - 3 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -34,6 +64,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release gw2fulcrum v0.1.3 ([`eb210d8`](https://github.com/berdandy/gw2fulcrum/commit/eb210d8f20103e45a57b5f8969184db5ed51c4d9))
     - First working implementation of update note analysis ([`7a313b4`](https://github.com/berdandy/gw2fulcrum/commit/7a313b44c1e35525315556cb6b7ac05473653ad5))
     - Balance update extraction from anet notes ([`52b5a1b`](https://github.com/berdandy/gw2fulcrum/commit/52b5a1b0a251e005339efd28ad41c0d83004c6bf))
     - Typos in tests. Should have run it after renaming things. ([`8497951`](https://github.com/berdandy/gw2fulcrum/commit/8497951d2bc6aa60685ff43d2e8ab36471551223))
