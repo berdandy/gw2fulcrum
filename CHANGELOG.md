@@ -5,7 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.2.1 (2026-01-25)
+
+### Chore
+
+ - <csr-id-a8cbafa47319af8bd3d0647722ad81b1cf8c7609/> fixing chatr dep
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 1 commit contributed to the release.
+ - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Fixing chatr dep ([`a8cbafa`](https://github.com/berdandy/gw2fulcrum/commit/a8cbafa47319af8bd3d0647722ad81b1cf8c7609))
+</details>
+
 ## 0.2.0 (2026-01-25)
+
+<csr-id-a05d6ae07bb38a2d5d7035d28b8dd5a95f7a3432/>
 
 ### Chore
 
@@ -21,7 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 5 commits contributed to the release over the course of 7 calendar days.
+ - 6 commits contributed to the release over the course of 7 calendar days.
  - 7 days passed between releases.
  - 4 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
@@ -33,6 +59,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release gw2fulcrum v0.2.0 ([`1d6b797`](https://github.com/berdandy/gw2fulcrum/commit/1d6b7977ca4dcfdef330d28405ceacc99b263fde))
     - Multi-string output of build notes ([`5b3ab03`](https://github.com/berdandy/gw2fulcrum/commit/5b3ab0397b4617ec753d2df4dcce252728e5e931))
     - Added show-notes argument for 'mini-verbose' ([`30a5c84`](https://github.com/berdandy/gw2fulcrum/commit/30a5c8480b6ebf71e9903e4d9daaaa45a1244fd7))
     - Api cache update and script ([`0a55dfe`](https://github.com/berdandy/gw2fulcrum/commit/0a55dfe353117fe74f8e5379387adffb8cd5ee1c))
