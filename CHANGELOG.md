@@ -5,6 +5,41 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.2.0 (2026-01-25)
+
+### Chore
+
+ - <csr-id-a05d6ae07bb38a2d5d7035d28b8dd5a95f7a3432/> reverting previous change, it doesn't make sense in hindsight
+
+### New Features
+
+ - <csr-id-5b3ab0397b4617ec753d2df4dcce252728e5e931/> multi-string output of build notes
+ - <csr-id-30a5c8480b6ebf71e9903e4d9daaaa45a1244fd7/> added show-notes argument for 'mini-verbose'
+ - <csr-id-861cf819dfbb6b2d43b79045c5db02db550d0056/> we no longer care about unchanged in verbose mode
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 5 commits contributed to the release over the course of 7 calendar days.
+ - 7 days passed between releases.
+ - 4 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Multi-string output of build notes ([`5b3ab03`](https://github.com/berdandy/gw2fulcrum/commit/5b3ab0397b4617ec753d2df4dcce252728e5e931))
+    - Added show-notes argument for 'mini-verbose' ([`30a5c84`](https://github.com/berdandy/gw2fulcrum/commit/30a5c8480b6ebf71e9903e4d9daaaa45a1244fd7))
+    - Api cache update and script ([`0a55dfe`](https://github.com/berdandy/gw2fulcrum/commit/0a55dfe353117fe74f8e5379387adffb8cd5ee1c))
+    - Reverting previous change, it doesn't make sense in hindsight ([`a05d6ae`](https://github.com/berdandy/gw2fulcrum/commit/a05d6ae07bb38a2d5d7035d28b8dd5a95f7a3432))
+    - We no longer care about unchanged in verbose mode ([`861cf81`](https://github.com/berdandy/gw2fulcrum/commit/861cf819dfbb6b2d43b79045c5db02db550d0056))
+</details>
+
 ## 0.1.5 (2026-01-18)
 
 ### New Features
@@ -15,7 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 1 commit contributed to the release.
+ - 2 commits contributed to the release.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -26,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release gw2fulcrum v0.1.5 ([`01dba30`](https://github.com/berdandy/gw2fulcrum/commit/01dba306a63a14808948cac8f995f813e1a8202c))
     - Added skill/trait prefix to build note for usability ([`f66c0a4`](https://github.com/berdandy/gw2fulcrum/commit/f66c0a4facf7bbb01d03e2df8c6af39470867e86))
 </details>
 
