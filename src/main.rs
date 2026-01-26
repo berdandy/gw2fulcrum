@@ -43,7 +43,7 @@ fn main() {
             let dep = BuildDependencies::from_templates(&gear, &build);
             if let Some(notes) = update.affects(&dep) {
                 if args.verbose || args.show_notes || args.builds.len() == 1 {
-                    println!("{} was changed: \"{}\"", file_path.clone(), notes);
+                    println!("{} was changed: {}", file_path.clone(), notes);
                 } else if ! args.invert {
                     println!("{}", file_path.clone());
                 }

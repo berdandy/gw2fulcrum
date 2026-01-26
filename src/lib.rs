@@ -87,20 +87,29 @@ impl BalanceUpdate {
     }
 
     /// returns Some("change note") if any of the provided dependencies are present in the update
-    pub fn affects(&self, dependencies: &BuildDependencies) -> Option<&str> {
+    pub fn affects(&self, dependencies: &BuildDependencies) -> Option<String> {
+        let mut notes = String::new();
         for change in &self.changes {
             for dep_trait in &dependencies.traits {
                 if change.tr == *dep_trait {
-                    return Some(&change.note)
+                    notes.push_str("\n\t");
+                    notes.push_str(&change.note);
+                    // return Some(&change.note)
                 }
             }
             for dep_skill in &dependencies.skills {
                 if change.sk == *dep_skill {
-                    return Some(&change.note)
+                    notes.push_str("\n\t");
+                    notes.push_str(&change.note);
+                    // return Some(&change.note)
                 }
             }
         }
-        None
+        if notes.len() > 0 {
+            Some(notes)
+        } else {
+            None
+        }
     }
 
     pub fn parse_notes(notes :&str) -> BalanceUpdate {
