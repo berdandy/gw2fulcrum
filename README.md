@@ -10,13 +10,14 @@ Usage: gw2fulcrum [OPTIONS] <UPDATE_PATH> [BUILDS]...
 
 Arguments:
   <UPDATE_PATH>  update note file, in the format of: "(SKILL_OR_TRAIT_NAME): (NOTES)"
-  [BUILDS]...    build markdown filenames (in https://aw2.help format)
+  [BUILDS]...    build markdown filenames
 
 Options:
-  -v, --verbose  
-  -i, --invert   
-  -h, --help     Print help
-  -V, --version  Print version
+  -v, --verbose     
+  -s, --show-notes  
+  -i, --invert      
+  -h, --help        Print help
+  -V, --version     Print version
 ```
 
 UPDATE_PATH file must be in the form:
